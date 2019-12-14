@@ -30,9 +30,9 @@ defmodule Netrc.Token do
   alias Netrc.Token
 
   @type t :: %__MODULE__{
-    io: pid(),
-    tokens: [String.t()] | :eof
-  }
+          io: pid(),
+          tokens: [String.t()] | :eof
+        }
 
   @doc """
   Creates a Token context.
@@ -65,7 +65,7 @@ defmodule Netrc.Token do
         {value, %{token | tokens: next_tokens}}
 
       :eof ->
-        {:nil, next_token}
+        {nil, next_token}
     end
   end
 

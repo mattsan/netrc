@@ -9,10 +9,9 @@ defmodule Netrc.Machine do
   alias Netrc.Machine
 
   @type t :: %__MODULE__{
-    login: String.t() | nil,
-    password: String.t() | nil
-  }
-
+          login: String.t() | nil,
+          password: String.t() | nil
+        }
 
   @doc """
   Returns a new machine struct.
